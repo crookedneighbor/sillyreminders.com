@@ -35,7 +35,7 @@
 
 	@media screen(sm) {
 		.wrapper {
-			@apply prose-xl mx-auto;
+			@apply prose-xl mx-auto mt-16;
 		}
 	}
 </style>
