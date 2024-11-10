@@ -12,6 +12,14 @@
 <style lang="postcss">
 	:global(html) {
 		background-color: theme(colors.purple);
+
+		:global(a) {
+			@apply text-blue;
+			&:hover,
+			&:focus {
+				@apply text-red;
+			}
+		}
 	}
 
 	.wrapper {

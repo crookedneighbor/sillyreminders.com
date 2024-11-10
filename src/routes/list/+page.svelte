@@ -28,14 +28,6 @@
 		@apply my-8 text-3xl;
 	}
 
-	a {
-		@apply text-blue;
-		&:hover,
-		&:focus {
-			@apply text-red;
-		}
-	}
-
 	button {
 		@apply m-auto block rounded bg-blue px-16 py-4 text-8xl text-cream transition-colors;
 	}
