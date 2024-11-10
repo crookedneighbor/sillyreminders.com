@@ -1,11 +1,10 @@
 <script lang="ts">
-	import { page } from '$app/stores';
 	import random from '$lib/random.js';
 
 	let { children } = $props();
 
 	function goToRandom() {
-		random([$page.url.pathname]);
+		random();
 	}
 </script>
 

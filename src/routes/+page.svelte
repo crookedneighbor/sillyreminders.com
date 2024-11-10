@@ -4,7 +4,7 @@
 
 	onMount(() => {
 		setTimeout(() => {
-			random([]);
+			random();
 		}, 2000);
 	});
 </script>
