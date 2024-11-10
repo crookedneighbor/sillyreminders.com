@@ -1,3 +1,14 @@
+<script lang="ts">
+	import random from '$lib/random';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		setTimeout(() => {
+			random([]);
+		}, 2000);
+	});
+</script>
+
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150"
 	><path
 		fill="none"

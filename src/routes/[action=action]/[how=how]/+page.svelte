@@ -1,8 +1,27 @@
 <script lang="ts">
 	let { data } = $props();
-	let title = $derived(`${data.action} ${data.how}`);
+	let title = $derived(`Reminder, ${data.action.message} ${data.how.message}!`);
 </script>
 
 <h1>{title}</h1>
+<div class="reminder">
+	<div class="action">
+		{data.action.emoji}
+	</div>
+	<div class="how">
+		{data.how.emoji}
+	</div>
+</div>
 
-<button>New</button>
+<style lang="postcss">
+	h1 {
+		@apply m-auto my-4 text-center text-3xl;
+	}
+	.reminder {
+		@apply my-8 flex justify-center text-9xl;
+	}
+	.action,
+	.how {
+		@apply shrink animate-wiggle px-8;
+	}
+</style>
