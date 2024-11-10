@@ -13,7 +13,17 @@ export default {
 			black: '#1F271B',
 			cream: '#FAF0CA'
 		},
-		extend: {}
+		extend: {
+			keyframes: {
+				wiggle: {
+					'0%, 100%': { transform: 'rotate(-20deg)' },
+					'50%': { transform: 'rotate(20deg)' }
+				}
+			},
+			animation: {
+				wiggle: 'wiggle 1.5s ease-in-out infinite'
+			}
+		}
 	},
 
 	plugins: [typography]
