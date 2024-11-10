@@ -11,16 +11,8 @@ function randomFromList(list: string[]) {
 function randomPath() {
 	const path = get(page).url.pathname;
 	const pageParams = path.split('/').filter((val) => val);
-	const alreadyUsedPaths = localStorage.getItem('used-paths') || '';
-	let usedPaths = alreadyUsedPaths;
-	if (path !== '/') {
-		if (!alreadyUsedPaths) {
-			localStorage.setItem('used-paths', path);
-		} else if (alreadyUsedPaths.indexOf(path) === -1) {
-			usedPaths = `${usedPaths},${path}`;
-			localStorage.setItem('used-paths', usedPaths);
-		}
-	}
+	const usedPaths = localStorage.getItem('used-paths') || '';
+
 	const elligiblePaths = pagePaths.filter((path) => {
 		return !usedPaths.includes(path);
 	});
@@ -28,13 +20,19 @@ function randomPath() {
 		return !pageParams.includes(path);
 	});
 
-	if (optimalPaths.length > 0) {
-		return randomFromList(optimalPaths);
+	const newPath = randomFromList(optimalPaths) || randomFromList(elligiblePaths);
+
+	if (!newPath) {
+		return '/sorry';
 	}
-	if (elligiblePaths.length === 0) {
-		return `/sorry`;
+
+	if (!usedPaths) {
+		localStorage.setItem('used-paths', newPath);
+	} else {
+		localStorage.setItem('used-paths', `${usedPaths},${newPath}`);
 	}
-	return randomFromList(elligiblePaths);
+
+	return newPath;
 }
 
 export default function random() {
