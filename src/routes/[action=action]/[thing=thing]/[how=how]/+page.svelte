@@ -1,12 +1,17 @@
 <script lang="ts">
 	let { data } = $props();
-	let title = $derived(`Reminder, ${data.action.message} ${data.how.message}!`);
+	let title = $derived(
+		`Reminder, ${data.action.message} ${data.thing.message} ${data.how.message}!`
+	);
 </script>
 
 <h1>{title}</h1>
 <div class="reminder">
 	<div class="action">
 		{data.action.emoji}
+	</div>
+	<div class="thing">
+		{data.thing.emoji}
 	</div>
 	<div class="how">
 		{data.how.emoji}
@@ -21,6 +26,7 @@
 		@apply my-8 flex justify-center text-9xl;
 	}
 	.action,
+	.thing,
 	.how {
 		@apply shrink animate-wiggle px-8;
 	}
