@@ -12,13 +12,20 @@
 <style lang="postcss">
 	:global(html) {
 		background-color: theme(colors.purple);
+	}
 
-		:global(a) {
-			@apply text-blue;
-			&:hover,
-			&:focus {
-				@apply text-red;
-			}
+	:global(a) {
+		@apply text-blue;
+		&:hover,
+		&:focus {
+			@apply text-red;
+		}
+	}
+
+	:global(button) {
+		@apply m-auto block rounded bg-blue px-16 py-4 text-8xl text-cream transition-colors;
+		&:hover {
+			@apply bg-red;
 		}
 	}
 

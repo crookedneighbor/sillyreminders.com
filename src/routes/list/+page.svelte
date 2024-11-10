@@ -10,7 +10,7 @@
 </script>
 
 <div class="page">
-	<h2 class="text-center">Pages You've Visited</h2>
+	<h2 class="text-center">Reminders You've Gotten</h2>
 	<ul>
 		{#each list as item}
 			<li><a href={item}>{item}</a></li>
@@ -28,10 +28,7 @@
 		@apply my-8 text-3xl;
 	}
 
-	button {
-		@apply m-auto block rounded bg-blue px-16 py-4 text-8xl text-cream transition-colors;
-	}
-	button:hover {
-		@apply bg-red;
+	ul {
+		@apply grid grid-cols-3 justify-between gap-4 text-center;
 	}
 </style>

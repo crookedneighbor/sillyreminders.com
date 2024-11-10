@@ -17,6 +17,9 @@
 	<img src="/stick-person.gif" alt="" />
 	<button onclick={goToRandom}>New</button>
 </div>
+<p class="p-4 text-center">
+	See <a href="/list">all the reminders</a> you've already gotten.
+</p>
 
 <style lang="postcss">
 	h1 {
@@ -38,12 +41,5 @@
 
 	img {
 		max-width: 15rem;
-	}
-
-	button {
-		@apply m-auto block rounded bg-blue px-16 py-4 text-8xl text-cream transition-colors;
-	}
-	button:hover {
-		@apply bg-red;
 	}
 </style>
