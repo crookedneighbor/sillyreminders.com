@@ -9,14 +9,38 @@
 	}
 </script>
 
-{@render children()}
+<div class="page">
+	{@render children()}
+</div>
+<div class="speech-arrow"></div>
 
-<button onclick={goToRandom}>New</button>
+<div class="flex">
+	<img src="/stick-person.gif" alt="" />
+	<button onclick={goToRandom}>New</button>
+</div>
 
 <style lang="postcss">
 	h1 {
 		@apply m-auto my-4 text-center text-3xl;
 	}
+
+	.page {
+		background-color: theme(colors.cream);
+		@apply rounded p-4 pt-6;
+	}
+
+	.speech-arrow {
+		width: 10px;
+		border-top: 20px solid theme(colors.cream);
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		@apply ml-24;
+	}
+
+	img {
+		max-width: 15rem;
+	}
+
 	button {
 		@apply m-auto block rounded bg-blue px-16 py-4 text-8xl text-cream transition-colors;
 	}

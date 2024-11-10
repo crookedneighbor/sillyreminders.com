@@ -6,9 +6,7 @@
 <div class="wrapper">
 	<h1>SillyReminders.com</h1>
 
-	<div class="page">
-		{@render children()}
-	</div>
+	{@render children()}
 </div>
 
 <style lang="postcss">
@@ -19,11 +17,6 @@
 	.wrapper {
 		background-color: theme(colors.yellow);
 		@apply prose m-4 rounded-xl p-4;
-	}
-
-	.page {
-		background-color: theme(colors.cream);
-		@apply rounded p-4 pt-6;
 	}
 
 	h1 {
