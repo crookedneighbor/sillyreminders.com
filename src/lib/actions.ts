@@ -4,16 +4,16 @@ export const actions = {
 		emoji: '📖'
 	},
 	draw: {
-		message: 'draw a squirrel',
-		emoji: '️🐿️✍'
+		message: 'draw',
+		emoji: '️✍'
 	},
 	eat: {
-		message: 'eat a meal',
-		emoji: '🍕'
+		message: 'eat',
+		emoji: '😋'
 	},
 	bike: {
-		message: 'ride a bike',
-		emoji: '🚲'
+		message: 'ride',
+		emoji: '🎢'
 	},
 	walk: {
 		message: 'walk',

@@ -17,7 +17,7 @@ export const hows = {
 	},
 	kitty: {
 		message: 'with a kitty',
-		emoji: '😻'
+		emoji: '🐈‍⬛'
 	}
 };
 
