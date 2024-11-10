@@ -1,3 +1,5 @@
+import { howParams } from '$lib/hows';
+
 export function match(param) {
-	return param === 'nose';
+	return howParams.includes(param);
 }

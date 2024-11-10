@@ -1,3 +1,5 @@
+import { actionParams } from '$lib/actions';
+
 export function match(param) {
-	return param === 'read';
+	return actionParams.includes(param);
 }
