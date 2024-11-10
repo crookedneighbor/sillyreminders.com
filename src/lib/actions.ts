@@ -11,7 +11,7 @@ export const actions = {
 		message: 'eat',
 		emoji: '😋'
 	},
-	bike: {
+	ride: {
 		message: 'ride',
 		emoji: '🎢'
 	},
