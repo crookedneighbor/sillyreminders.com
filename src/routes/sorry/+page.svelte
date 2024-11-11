@@ -9,7 +9,6 @@
 
 <div class="page">
 	<h2 class="text-center">Whoops! Looks like you are out of reminders!</h2>
-	<p class="mb-4 text-center">Check out all the <a href="/list">reminders you've gotten</a>.</p>
 	<button onclick={reset}>Reset!</button>
 </div>
 
