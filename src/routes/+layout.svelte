@@ -53,7 +53,7 @@
 
 	header {
 		background-color: theme(colors.cream);
-		@apply m-auto -mt-8 w-min rounded-t-xl border-8 border-b-0 border-yellow px-8 pb-0 pt-2 text-center text-2xl;
+		@apply m-auto -mt-8 w-min rounded-t-3xl border-8 border-b-0 border-yellow px-8 pb-0 pt-2 text-center text-2xl;
 	}
 
 	@media screen(sm) {
