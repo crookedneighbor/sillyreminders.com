@@ -1,8 +1,9 @@
 <script lang="ts">
 	interface Props {
 		hideRandomButton?: boolean;
+		hideReminderListLink?: boolean;
 	}
-	let { hideRandomButton = false }: Props = $props();
+	let { hideRandomButton = false, hideReminderListLink = false }: Props = $props();
 </script>
 
 <div class="speech-arrow"></div>
@@ -12,9 +13,11 @@
 		<a class="button" href="/random">New</a>
 	{/if}
 </div>
-<p class="p-4 text-center">
-	See <a href="/list">all the reminders</a> you've already gotten.
-</p>
+{#if !hideReminderListLink}
+	<p class="p-4 text-center">
+		See <a href="/list">all the reminders</a> you've already gotten.
+	</p>
+{/if}
 
 <style lang="postcss">
 	.speech-arrow {
