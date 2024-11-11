@@ -28,3 +28,9 @@
 		></animate></path
 	></svg
 >
+
+<style lang="postcss">
+	svg {
+		@apply m-auto w-2/3;
+	}
+</style>
