@@ -30,7 +30,11 @@
 >
 
 <style lang="postcss">
-	svg {
-		@apply m-auto w-2/3;
+	@media screen(sm) {
+		svg {
+			/* hard-coded to match the typical height of a reminder */
+			height: 244px;
+			@apply m-auto;
+		}
 	}
 </style>
