@@ -17,12 +17,12 @@ describe('StickFigureFooter', () => {
 	it('can hide reminder list', async () => {
 		const { rerender } = render(StickFigureFooter);
 
-		// expect(screen.getByRole('link', { name: 'all the reminders' })).toBeInTheDocument();
+		expect(screen.getByRole('link', { name: 'all the reminders' })).toBeInTheDocument();
 
-		// await rerender({
-		// 	hideReminderListLink: true
-		// });
+		await rerender({
+			hideReminderListLink: true
+		});
 
-		// expect(screen.queryByRole('link', { name: 'all the reminders' })).not.toBeInTheDocument();
+		expect(screen.queryByRole('link', { name: 'all the reminders' })).not.toBeInTheDocument();
 	});
 });

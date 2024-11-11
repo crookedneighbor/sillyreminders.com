@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import StickFigureFooter from '$lib/components/StickFigureFooter.svelte';
 	import '../app.css';
 	let { children } = $props();
@@ -11,7 +12,10 @@
 		{@render children()}
 	</div>
 
-	<StickFigureFooter></StickFigureFooter>
+	<StickFigureFooter
+		hideRandomButton={$page.data.hideRandomButton}
+		hideReminderListLink={$page.data.hideReminderListLink}
+	></StickFigureFooter>
 </div>
 
 <style lang="postcss">
