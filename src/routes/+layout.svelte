@@ -12,11 +12,14 @@
 		{@render children()}
 	</div>
 
-	<StickFigureFooter
-		hideRandomButton={$page.data.hideRandomButton}
-		hideReminderListLink={$page.data.hideReminderListLink}
-	></StickFigureFooter>
+	<StickFigureFooter hideRandomButton={$page.data.hideRandomButton}></StickFigureFooter>
 </div>
+
+{#if !$page.data.hideReminderListLink}
+	<p class="p-4 text-center text-cream">
+		See <a href="/list">all the reminders</a> you've already gotten.
+	</p>
+{/if}
 
 <style lang="postcss">
 	:global(html) {
