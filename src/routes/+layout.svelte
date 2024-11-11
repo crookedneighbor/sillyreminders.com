@@ -1,4 +1,5 @@
 <script lang="ts">
+	import StickFigureFooter from '$lib/components/StickFigureFooter.svelte';
 	import '../app.css';
 	let { children } = $props();
 </script>
