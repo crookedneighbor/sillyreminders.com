@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import LinkButton from '$lib/components/LinkButton.svelte';
 
 	function reset() {
 		localStorage.setItem('used-paths', '');
@@ -7,25 +8,13 @@
 	}
 </script>
 
-<div class="page">
-	<h2 class="text-center">Whoops! Looks like you are out of reminders!</h2>
-	<button onclick={reset}>Reset!</button>
+<h2 class="text-center">Whoops! Looks like you are out of reminders!</h2>
+<div class="my-4 flex justify-center">
+	<LinkButton href="/random" onclick={reset}>Reset!</LinkButton>
 </div>
 
 <style lang="postcss">
-	.page {
-		background-color: theme(colors.cream);
-		@apply rounded p-4 pt-6;
-	}
-
 	h2 {
-		@apply my-8 text-3xl;
-	}
-
-	button {
-		@apply m-auto block rounded bg-blue px-16 py-4 text-8xl text-cream transition-colors;
-	}
-	button:hover {
-		@apply bg-red;
+		@apply my-8 text-2xl;
 	}
 </style>

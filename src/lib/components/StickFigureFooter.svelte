@@ -1,4 +1,6 @@
 <script lang="ts">
+	import LinkButton from './LinkButton.svelte';
+
 	interface Props {
 		hideRandomButton?: boolean;
 	}
@@ -7,10 +9,14 @@
 
 <div class="speech-arrow"></div>
 <div class="little-guy">
-	<img src="/stick-person.gif" alt="" />
-	{#if !hideRandomButton}
-		<a class="button" href="/random">New</a>
-	{/if}
+	<div class="flex-grow text-center">
+		<img src="/stick-person.gif" alt="" />
+	</div>
+	<div class="flex-grow">
+		{#if !hideRandomButton}
+			<LinkButton href="/random">New</LinkButton>
+		{/if}
+	</div>
 </div>
 
 <style lang="postcss">
@@ -24,19 +30,24 @@
 
 	img {
 		max-width: 15rem;
-		@apply m-auto mb-4 block;
+		@apply inline-block;
+	}
+
+	.little-guy {
+		@apply mb-4 flex flex-col items-center justify-center;
 	}
 
 	@media screen(sm) {
 		.little-guy {
-			@apply mb-4 flex;
+			@apply flex-row;
+
+			.flex-grow {
+				@apply w-1/2;
+			}
 		}
 
-		img {
-			@apply m-0;
-		}
 		.speech-arrow {
-			@apply ml-24;
+			@apply ml-48;
 		}
 	}
 </style>

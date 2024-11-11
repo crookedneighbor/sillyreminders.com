@@ -37,13 +37,6 @@
 		}
 	}
 
-	:global(button),
-	:global(.button) {
-		@apply m-auto block rounded bg-blue px-16 py-4 text-center text-8xl text-cream transition-colors;
-		&:hover {
-			@apply bg-red text-cream;
-		}
-	}
 	.page {
 		background-color: theme(colors.cream);
 		@apply rounded p-4 pt-6;
