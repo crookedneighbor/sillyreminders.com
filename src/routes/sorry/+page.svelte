@@ -1,9 +1,9 @@
 <script lang="ts">
-	import random from '$lib/random';
+	import { goto } from '$app/navigation';
 
 	function reset() {
 		localStorage.setItem('used-paths', '');
-		random();
+		goto('/random');
 	}
 </script>
 

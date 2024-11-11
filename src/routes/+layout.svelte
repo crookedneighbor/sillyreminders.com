@@ -31,10 +31,11 @@
 		}
 	}
 
-	:global(button) {
+	:global(button),
+	:global(.button) {
 		@apply m-auto block rounded bg-blue px-16 py-4 text-8xl text-cream transition-colors;
 		&:hover {
-			@apply bg-red;
+			@apply bg-red text-cream;
 		}
 	}
 	.page {

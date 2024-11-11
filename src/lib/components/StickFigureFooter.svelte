@@ -1,11 +1,7 @@
-<script lang="ts">
-	import random from '$lib/random';
-</script>
-
 <div class="speech-arrow"></div>
 <div class="flex">
 	<img src="/stick-person.gif" alt="" />
-	<button onclick={random}>New</button>
+	<a class="button" href="/random">New</a>
 </div>
 <p class="p-4 text-center">
 	See <a href="/list">all the reminders</a> you've already gotten.
