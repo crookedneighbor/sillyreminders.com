@@ -23,11 +23,22 @@
 		@apply m-auto my-4 text-center text-3xl;
 	}
 	.reminder {
-		@apply my-8 flex justify-center text-9xl;
+		@apply my-8 flex justify-center text-5xl;
 	}
 	.action,
 	.thing,
 	.how {
-		@apply shrink animate-wiggle px-8;
+		@apply shrink animate-wiggle px-2;
+	}
+
+	@media screen(sm) {
+		.reminder {
+			@apply text-9xl;
+		}
+		.action,
+		.thing,
+		.how {
+			@apply px-8;
+		}
 	}
 </style>
