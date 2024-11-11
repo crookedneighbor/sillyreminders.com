@@ -7,7 +7,7 @@
 </script>
 
 <div class="speech-arrow"></div>
-<div class="flex">
+<div class="little-guy">
 	<img src="/stick-person.gif" alt="" />
 	{#if !hideRandomButton}
 		<a class="button" href="/random">New</a>
@@ -25,10 +25,24 @@
 		border-top: 20px solid theme(colors.cream);
 		border-left: 20px solid transparent;
 		border-right: 20px solid transparent;
-		@apply ml-24;
+		@apply m-auto;
 	}
 
 	img {
 		max-width: 15rem;
+		@apply m-auto mb-4 block;
+	}
+
+	@media screen(sm) {
+		.little-guy {
+			@apply mb-4 flex;
+		}
+
+		img {
+			@apply m-0;
+		}
+		.speech-arrow {
+			@apply ml-24;
+		}
 	}
 </style>
