@@ -1,4 +1,3 @@
-import typography from '@tailwindcss/typography';
 import type { Config } from 'tailwindcss';
 
 export default {
@@ -24,7 +23,5 @@ export default {
 				wiggle: 'wiggle 1.5s ease-in-out infinite'
 			}
 		}
-	},
-
-	plugins: [typography]
+	}
 } satisfies Config;
