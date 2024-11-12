@@ -1,7 +1,8 @@
 export const hows = {
 	nose: {
 		message: 'with your nose',
-		emoji: '🐽'
+		emoji: '🐽',
+		animation: 'bounce'
 	},
 	head: {
 		message: 'with your head',
