@@ -16,4 +16,8 @@ describe('randomFromList', () => {
 		spy.mockReturnValue(0.9);
 		expect(randomFromList(list)).toEqual('d');
 	});
+
+	it('returns undefined if there are no values in array', () => {
+		expect(randomFromList([])).toBeUndefined();
+	});
 });
