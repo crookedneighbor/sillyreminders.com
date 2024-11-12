@@ -9,8 +9,8 @@ function randomFromList(list: string[]) {
 }
 
 function randomPath() {
-	const path = get(page).url.pathname;
-	const pageParams = path.split('/').filter((val) => val);
+	const pathName = get(page).url.pathname;
+	const pageParams = pathName.split('/').filter((val) => val);
 	const usedPaths = localStorage.getItem('used-paths') || '';
 
 	const elligiblePaths = pagePaths.filter((path) => {
