@@ -7,12 +7,16 @@
 	let { hideRandomButton = false }: Props = $props();
 </script>
 
-<div class="speech-arrow"></div>
+<div class="arrows">
+	<div class="speech-arrow"></div>
+	<div class="speech-arrow"></div>
+</div>
 <div class="little-guy">
 	<div class="flex-grow text-center">
+		<img src="/hat-stick-person.gif" alt="" />
 		<img src="/stick-person.gif" alt="" />
 	</div>
-	<div class="flex-grow">
+	<div class="button-container flex-grow">
 		{#if !hideRandomButton}
 			<LinkButton href="/random">New</LinkButton>
 		{/if}
@@ -20,16 +24,19 @@
 </div>
 
 <style lang="postcss">
+	.arrows {
+		@apply flex;
+	}
 	.speech-arrow {
 		width: 10px;
 		border-top: 20px solid theme(colors.cream);
 		border-left: 20px solid transparent;
 		border-right: 20px solid transparent;
-		@apply m-auto;
+		@apply hidden;
 	}
 
 	img {
-		max-width: 15rem;
+		max-width: 10rem;
 		@apply inline-block;
 	}
 
@@ -40,14 +47,27 @@
 	@media screen(sm) {
 		.little-guy {
 			@apply flex-row;
-
-			.flex-grow {
-				@apply w-1/2;
-			}
 		}
 
+		img {
+			max-width: 10rem;
+		}
+	}
+
+	@media screen(md) {
 		.speech-arrow {
-			@apply ml-48;
+			@apply ml-32 inline-block;
+		}
+
+		.speech-arrow:nth-child(2) {
+			@apply ml-44;
+		}
+
+		img {
+			max-width: 13.5rem;
+		}
+		.button-container {
+			@apply w-1/3;
 		}
 	}
 </style>
