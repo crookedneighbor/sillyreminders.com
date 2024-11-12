@@ -2,11 +2,7 @@ import { goto } from '$app/navigation';
 import { get } from 'svelte/store';
 import { pagePaths } from './page-paths';
 import { page } from '$app/stores';
-
-function randomFromList(list: string[]) {
-	const randomIndex = Math.floor(Math.random() * list.length);
-	return list[randomIndex];
-}
+import { randomFromList } from './random-from-list';
 
 function randomPath() {
 	const pathName = get(page).url.pathname;
