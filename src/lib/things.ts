@@ -17,7 +17,8 @@ export const things = {
 	},
 	shoe: {
 		message: 'your shoes',
-		emoji: '️👟'
+		emoji: '️👟',
+		animation: 'movingbounce'
 	}
 };
 

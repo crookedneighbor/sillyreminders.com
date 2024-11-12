@@ -6,7 +6,8 @@ export const hows = {
 	},
 	head: {
 		message: 'with your head',
-		emoji: '🥴'
+		emoji: '🤕',
+		animation: 'rollaround'
 	},
 	bones: {
 		message: 'with your bones',

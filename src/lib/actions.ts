@@ -9,7 +9,8 @@ export const actions = {
 	},
 	eat: {
 		message: 'eat',
-		emoji: '😋'
+		emoji: '😋',
+		animation: 'rollaround'
 	},
 	ride: {
 		message: 'ride',
@@ -17,7 +18,8 @@ export const actions = {
 	},
 	walk: {
 		message: 'walk',
-		emoji: '🚶‍♀️‍➡️'
+		emoji: '🚶‍♀️‍➡️',
+		animation: 'preamble'
 	}
 };
 
