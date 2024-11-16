@@ -1,7 +1,8 @@
 export const things = {
 	squirrel: {
 		message: 'a squirrel',
-		emoji: '🐿'
+		emoji: '🐿',
+		animation: 'tada'
 	},
 	pizza: {
 		message: 'some pizza',
@@ -9,11 +10,13 @@ export const things = {
 	},
 	bike: {
 		message: 'a bike',
-		emoji: '️🚲'
+		emoji: '️🚲',
+		animation: 'walkleft'
 	},
 	hippo: {
 		message: 'a hippo',
-		emoji: '️🦛'
+		emoji: '️🦛',
+		animation: 'tada'
 	},
 	shoe: {
 		message: 'your shoes',

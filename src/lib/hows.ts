@@ -7,19 +7,22 @@ export const hows = {
 	head: {
 		message: 'with your head',
 		emoji: '🤕',
-		animation: 'rollaround'
+		animation: 'headshake'
 	},
 	bones: {
 		message: 'with your bones',
-		emoji: '☠️'
+		emoji: '☠️',
+		animation: 'headshake'
 	},
 	toys: {
 		message: 'while playing with toys',
-		emoji: '🧸'
+		emoji: '🧸',
+		animation: 'tada'
 	},
 	kitty: {
 		message: 'with a kitty',
-		emoji: '🐈‍⬛'
+		emoji: '🐈‍⬛',
+		animation: 'walkleft'
 	}
 };
 

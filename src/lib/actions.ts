@@ -19,7 +19,7 @@ export const actions = {
 	walk: {
 		message: 'walk',
 		emoji: '🚶‍♀️‍➡️',
-		animation: 'preamble'
+		animation: 'walkright'
 	}
 };
 
