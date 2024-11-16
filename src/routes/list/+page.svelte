@@ -1,11 +1,14 @@
 <script lang="ts">
+	import { pagePaths } from '$lib/page-paths';
 	import { onMount } from 'svelte';
 
 	let list: string[] = $state([]);
 
 	onMount(() => {
-		const paths = (localStorage.getItem('used-paths') || '').split(',');
-		list = paths;
+		const pathsFromLocalStorage = (localStorage.getItem('used-paths') || '').split(',');
+		list = pagePaths.filter((path) => {
+			return pathsFromLocalStorage.includes(path);
+		});
 	});
 </script>
 
