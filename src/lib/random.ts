@@ -13,7 +13,7 @@ function randomPath() {
 		return !usedPaths.includes(path);
 	});
 	const optimalPaths = elligiblePaths.filter((path) => {
-		return !pageParams.includes(path);
+		return !path.split('/').find((subPath) => pageParams.includes(subPath));
 	});
 
 	const newPath = randomFromList(optimalPaths) || randomFromList(elligiblePaths);
