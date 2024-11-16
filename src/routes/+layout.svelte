@@ -53,6 +53,11 @@
 
 	header {
 		background-color: theme(colors.cream);
+		font-family: 'Kablammo', system-ui;
+		font-optical-sizing: auto;
+		font-weight: 400;
+		font-style: normal;
+		font-variation-settings: 'MORF' 0;
 		@apply m-auto -mt-8 w-min rounded-t-3xl border-8 border-b-0 border-yellow px-8 pb-0 pt-2 text-center text-2xl;
 	}
 
