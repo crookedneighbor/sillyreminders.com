@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Emoji from '$lib/components/Emoji.svelte';
+
 	let { data } = $props();
 	let title = $derived(
 		`Reminder, ${data.action.message} ${data.thing.message} ${data.how.message}!`
@@ -10,14 +12,14 @@
 
 <h1>{title}</h1>
 <div class="reminder">
-	<div class={actionClass}>
-		{data.action.emoji}
+	<div class="emoji">
+		<Emoji emoji={data.action.emoji} animation={data.action.animation} />
 	</div>
-	<div class={thingClass}>
-		{data.thing.emoji}
+	<div class="emoji">
+		<Emoji emoji={data.thing.emoji} animation={data.thing.animation} />
 	</div>
-	<div class={howClass}>
-		{data.how.emoji}
+	<div class="emoji">
+		<Emoji emoji={data.how.emoji} animation={data.how.animation} />
 	</div>
 </div>
 
@@ -28,9 +30,7 @@
 	.reminder {
 		@apply my-8 flex justify-center text-5xl;
 	}
-	.action,
-	.thing,
-	.how {
+	.emoji {
 		@apply shrink px-2;
 	}
 
@@ -38,18 +38,9 @@
 		.reminder {
 			@apply text-9xl;
 		}
-		.action,
-		.thing,
-		.how {
-			@apply px-8;
-		}
-	}
 
-	@media (prefers-reduced-motion) {
-		.action,
-		.thing,
-		.how {
-			@apply animate-none;
+		.emoji {
+			@apply px-8;
 		}
 	}
 </style>
