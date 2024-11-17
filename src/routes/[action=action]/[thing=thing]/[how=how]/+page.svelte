@@ -10,13 +10,13 @@
 <h1>{title}</h1>
 <div class="reminder">
 	<div class="emoji">
-		<Emoji emoji={data.action.emoji} animation={data.action.animation} />
+		<Emoji {...data.action} />
 	</div>
 	<div class="emoji">
-		<Emoji emoji={data.thing.emoji} animation={data.thing.animation} />
+		<Emoji {...data.thing} />
 	</div>
 	<div class="emoji">
-		<Emoji emoji={data.how.emoji} animation={data.how.animation} />
+		<Emoji {...data.how} />
 	</div>
 </div>
 
