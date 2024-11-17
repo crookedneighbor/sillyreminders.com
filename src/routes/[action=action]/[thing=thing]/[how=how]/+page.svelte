@@ -44,4 +44,12 @@
 			@apply px-8;
 		}
 	}
+
+	@media (prefers-reduced-motion) {
+		.action,
+		.thing,
+		.how {
+			@apply animate-none;
+		}
+	}
 </style>
