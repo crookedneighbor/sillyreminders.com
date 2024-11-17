@@ -25,7 +25,7 @@
 		@apply m-auto my-4 text-center text-3xl;
 	}
 	.reminder {
-		@apply my-8 flex justify-center text-5xl;
+		@apply my-8 flex justify-center text-7xl;
 	}
 	.emoji {
 		@apply shrink px-2;
