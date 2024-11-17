@@ -9,6 +9,7 @@
 	});
 </script>
 
+<h2>Loading...</h2>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150"
 	><path
 		fill="none"
@@ -30,11 +31,24 @@
 >
 
 <style lang="postcss">
+	h2 {
+		@apply hidden pt-16 text-center text-8xl;
+	}
 	@media screen(sm) {
-		svg {
+		svg,
+		h2 {
 			/* hard-coded to match the typical height of a reminder */
 			height: 244px;
 			@apply m-auto;
+		}
+	}
+
+	@media (prefers-reduced-motion) {
+		svg {
+			@apply hidden;
+		}
+		h2 {
+			@apply block;
 		}
 	}
 </style>
