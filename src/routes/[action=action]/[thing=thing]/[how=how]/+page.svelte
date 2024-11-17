@@ -5,9 +5,6 @@
 	let title = $derived(
 		`Reminder, ${data.action.message} ${data.thing.message} ${data.how.message}!`
 	);
-	let actionClass = $derived('action animate-' + (data.action.animation || 'wiggle'));
-	let thingClass = $derived('thing animate-' + (data.thing.animation || 'wiggle'));
-	let howClass = $derived('how animate-' + (data.how.animation || 'wiggle'));
 </script>
 
 <h1>{title}</h1>
